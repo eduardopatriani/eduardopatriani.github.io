@@ -4,7 +4,7 @@
     /*background: red;*/
     margin: 0 auto; /* Margem superior/inferior zero e automatico para esquerda e direita*/
     display: flex; /* Elementos na linha em Bloco */
-    justify-content: space-between; /*Espaçar os elementos em cada canto*/
+    justify-content: flex-end; /*Espaçar os elementos em cada canto*/
     align-items: center; /* Alinhados todos os elementos no centro */
 }
 
