@@ -1,0 +1,65 @@
+.introducao{
+    max-width: 1200px; /*Tamanho maximo da largura da pagina 1200px*/
+    margin: 0 auto; /* Margem superior/inferior zero e automatico para esquerda e direita*/
+    padding: 20px; /* padding 20px em todos os lados*/
+    display: grid; /*Elementos na linha em grid */
+    grid-template-columns: 1fr 2fr; /*Dividido em 2 colunas*/
+    gap: 100px; /* Espacamento entre os elementos */
+    align-items: center; /* Alinhados todos os elementos no centro */
+}
+
+.introducao h1 {
+    font-size: 4.5rem;
+    line-height: 1.125;
+    margin-bottom: 30px;
+    position: relative; /*Bloco na posicao relativa*/
+}
+
+.introducao h1::before {
+    content: "";
+    display: block; /*Elemento em bloco */
+    width: 130px; /*Tamanho da largura*/
+    height: 100px; /*Tamamho da altura*/
+    background-image: url("../img/detalhe.svg");
+    position: absolute; /*Bloco na posicao absoluta em relacao ao Pai [h1]*/
+    top: -15px;
+    left: -10px;
+    z-index: -1; /*Coloca o elmento atras*/
+}
+
+.introducao p {
+    font-size: 1.5rem;
+    color: #525252;
+    font-family: 'Fire Sans', Arial, sans-serif;
+}
+
+@media (max-width: 1000px){
+    .introducao h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .introducao {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    .introducao h1 {
+        font-size: 2rem;
+    }
+    .introducao h1::before{
+        width: 30px;
+        height: 10px;
+        left: 0px;
+    }
+}
+
+@media (max-width: 400px){
+    .introducao img {
+        display: none; /*Oculta a imagem*/
+    }
+    .introducao {
+        grid-template-columns: 1fr;
+    }
+
+}
